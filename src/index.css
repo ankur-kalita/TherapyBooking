@@ -1,0 +1,108 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mental Health App Design System - Calming and Professional */
+
+@layer base {
+  :root {
+    --background: 250 100% 99%;
+    --foreground: 213 31% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 31% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 31% 18%;
+
+    --primary: 200 98% 39%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 190 14% 93%;
+    --secondary-foreground: 213 31% 18%;
+
+    --muted: 190 14% 93%;
+    --muted-foreground: 213 19% 46%;
+
+    --accent: 142 76% 73%;
+    --accent-foreground: 213 31% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 190 14% 89%;
+    --input: 190 14% 89%;
+    --ring: 200 98% 39%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 250 100% 99%;
+    --sidebar-foreground: 213 31% 18%;
+    --sidebar-primary: 200 98% 39%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 190 14% 93%;
+    --sidebar-accent-foreground: 213 31% 18%;
+    --sidebar-border: 190 14% 89%;
+    --sidebar-ring: 200 98% 39%;
+  }
+
+  .dark {
+    --background: 213 31% 18%;
+    --foreground: 0 0% 98%;
+    --card: 213 31% 18%;
+    --card-foreground: 0 0% 98%;
+    --popover: 213 31% 18%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 200 98% 39%;
+    --primary-foreground: 213 31% 18%;
+    --secondary: 213 19% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 213 19% 25%;
+    --muted-foreground: 190 14% 65%;
+    --accent: 142 76% 73%;
+    --accent-foreground: 213 31% 18%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 213 19% 25%;
+    --input: 213 19% 25%;
+    --ring: 200 98% 39%;
+    --sidebar-background: 213 31% 18%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 200 98% 39%;
+    --sidebar-primary-foreground: 213 31% 18%;
+    --sidebar-accent: 213 19% 25%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 213 19% 25%;
+    --sidebar-ring: 200 98% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom gradient utilities for mental health theme */
+@layer utilities {
+  .bg-gradient-calm {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+  
+  .bg-gradient-peaceful {
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
